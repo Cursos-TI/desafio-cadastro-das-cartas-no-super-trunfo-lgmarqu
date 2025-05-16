@@ -6,7 +6,7 @@ int main(){
 
     char estado_a, estado_b, codigo[4], codigo_2[4], nome_cidade[30], nome_cidade_2[30];
     int populacao, populacao_2, pontos_turisticos, pontos_turisticos_2;
-    float area, area_2, PIB, PIB_2;
+    float area, area_2, PIB, PIB_2, densidade_populacional, densidade_populacional_2, pib_per_capita, pib_per_capita_2;;
  
 printf("**Seja bem vindo ao jogo de cartas super trunfo**\n\n");
 
@@ -33,6 +33,8 @@ printf("Digite o PIB: ");
 printf("Digite os pontos turísticos: ");
     scanf("%d", &pontos_turisticos);
 
+densidade_populacional = populacao / area;
+pib_per_capita = (PIB / populacao) * 100000000; 
 
 printf("\n\n");
 
@@ -62,6 +64,9 @@ printf("Digite os pontos turísticos: ");
     scanf("%d", &pontos_turisticos_2);
 
 
+densidade_populacional_2 = populacao_2 / area_2;
+pib_per_capita_2 = (PIB_2 / populacao_2) * 100000000; 
+
 printf("\n\n");
 
 //IMPRIMIR DADOS NA TELA
@@ -71,8 +76,10 @@ printf("Código: %s\n", codigo);
 printf("Nome da cidade: %s\n", nome_cidade);
 printf("População: %d\n", populacao);
 printf("Área: %.2f\n", area);
-printf("PIB: %.2f\n", PIB);
+printf("PIB: %2.f\n", PIB);
 printf("Pontos turísticos: %d\n", pontos_turisticos);
+printf("Densidade Populacional: %.2f\n", densidade_populacional);
+printf("PIB per Capita: %.2f\n", pib_per_capita);
 
 printf("\n");
 
@@ -83,6 +90,10 @@ printf("População: %d\n", populacao_2);
 printf("Área: %.2f\n", area_2);
 printf("PIB: %.2f\n", PIB_2);
 printf("Pontos turísticos: %d\n", pontos_turisticos_2);
+printf("Densidade Populacional: %.2f\n", densidade_populacional_2);
+printf("PIB per Capita: %.2f\n", pib_per_capita_2);
+
+
 
 return 0;
 
